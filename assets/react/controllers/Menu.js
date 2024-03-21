@@ -11,6 +11,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import Contact from './Contact';
 
 const items = [
     {
@@ -27,7 +28,8 @@ const items = [
 
     {
         label: 'Contact',
-        icon: 'pi pi-envelope'
+        icon: 'pi pi-envelope',
+        url: '/contact'
     },
 
     {
@@ -47,6 +49,9 @@ export default function (props) {
             <Routes>
                 <Route path="/"  element={<Home/>} />
                 <Route path="/about" element={<About/>} />
+                <Route path="/contact" element={<Contact/>} />
+
+                <Route path="/login" element={<Login/>} />
 
             </Routes>
         </Router>
