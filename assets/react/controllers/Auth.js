@@ -1,27 +1,26 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { PrimeReactProvider } from 'primereact/api';
-import Menu from './Menu'
-
-class App extends React.Component {
+import AuthMenu from './AuthMenu';
+class AuthApp extends React.Component {
     render() {
         return (
             <PrimeReactProvider>
-                <Menu/>
+                <AuthMenu/>
             </PrimeReactProvider>
 
         )
     }
 }
 document.addEventListener('DOMContentLoaded', function() {
-    const RootContainer = document.getElementById('root');
+    const authRootContainer = document.getElementById('auth_root');
 
     // Sprawdzenie, czy kontener istnieje
-    if (RootContainer !== null) {
-        const Root = createRoot(RootContainer);
-        Root.render(<App/>)
+    if (authRootContainer !== null) {
+        const authRoot = createRoot(authRootContainer);
+        authRoot.render(<AuthApp/>)
 
     } else {
-        console.error('root container not found');
+        console.error('Auth root container not found');
     }
 });

@@ -3,8 +3,7 @@ import { Menubar } from 'primereact/menubar';
 import Home from './Home'
 import Login from './Login'
 import About from './About';
-import ReactDOM from 'react-dom';
-import styles from './Menu.module.css'
+
 import {
     BrowserRouter as Router,
     Routes,
